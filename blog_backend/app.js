@@ -1,4 +1,4 @@
-const config = ('./utils/config')
+const config = require('./utils/config')
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -18,12 +18,15 @@ mongoose.connect(config.MONGODB_URI)
         logger.error(`error connecting to MONGODB: ${err.message}`)
     })
 
+
 app.use(cors())
 // app.use(express.static('dist'))
 app.use(express.json())
 app.use(middleware.requestLogger)
+
+app.use('/api/blogs', blogRouter)
+
 app.use(middleware.errorHandler)
 app.use(middleware.unknownEndpoint)
-app.use('/api/blogs', blogRouter)
 
 module.exports = app
