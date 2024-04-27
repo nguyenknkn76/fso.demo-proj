@@ -1,8 +1,8 @@
 GET http://localhost:3001/api/blogs
 ###
-GET http://localhost:3001/api/notes/2
+GET http://localhost:3001/api/blogs/662b958ce24c3173e909e6b3
 ###
-DELETE http://localhost:3001/api/notes/3
+DELETE http://localhost:3001/api/blogs
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
@@ -11,5 +11,5 @@ Content-Type: application/json
     "title": "da vinci code",
     "author": "dan brown",
     "url": "http://gigidosoidk",
-    "likes": 123
+    "likes": 1111111111
 }
