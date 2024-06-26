@@ -11,11 +11,13 @@ const Notes = () => {
     //     else if(filter === "NONIMPORTANT") return state.notes.filter(note => !note.important)
     //     else return state.notes
     // })
+
     const notes = useSelector(state => state.notes)
     
     const fetchNotes = async() => {
-        const loadNotes = await NoteService.getAll()
-        dispatch(setNotes(loadNotes))
+        await NoteService
+            .getAll()
+            .then(notes => dispatch(setNotes(notes)))
     }
 
     useEffect( () => {
