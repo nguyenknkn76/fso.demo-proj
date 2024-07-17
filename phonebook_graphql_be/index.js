@@ -182,7 +182,7 @@ const resolvers = {
       const currentUser = context.currentUser
 
       if(!currentUser){
-        throw new GraphQLError('not tuthenticated', {
+        throw new GraphQLError('not authenticated', {
           extensions:{
             code: 'BAD_USER_INPUT'
           }
@@ -216,11 +216,15 @@ const resolvers = {
       // return person
     },
 
-    editNumber:  async (root, args) => {
+    editNumber:  async (root, args, context) => {
+      if (!context.currentUser){ 
+        throw new GraphQLError('have to login before dosmt')
+      }
       const person = await Person.findOne({name: args.name})
       person.phone = args.phone
+      
       try{
-        person.save()
+        return person.save()
       } catch(error){
         throw new GraphQLError('EDIT PERSON: saving person failed',{
           extensions:{
@@ -228,10 +232,8 @@ const resolvers = {
             invalidArgs: args.phone,
             error
           }
-        }
-        )
+        })
       }
-      return person.save()
       // const person= persons.find(p => p.name === args.name)
       // if(!person){
       //   return null
