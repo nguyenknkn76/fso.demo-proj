@@ -1,18 +1,25 @@
 import { ALL_AUTHORS, EDIT_NUMBER } from "../../queries"
 import { useQuery, useMutation} from "@apollo/client"
 import {useState, useEffect} from 'react'
-const Authors = (props) => {
+const Authors = () => {
     const [name, setName] = useState('')
     const [born, setBorn] = useState('')
-    
-    const result = useQuery(ALL_AUTHORS)
-    const [editNumber] = useMutation(EDIT_NUMBER, {
-      refetchQueries: [{query: ALL_AUTHORS}]
-    })
 
-    if (!props.show) {
-      return null
-    }
+    const result = useQuery(ALL_AUTHORS)
+    // console.log( result)
+    const [editNumber] = useMutation(EDIT_NUMBER, {
+      refetchQueries: [{query: ALL_AUTHORS}],
+      update:  (cache, res) => {
+        cache.updateQuery({query: ALL_AUTHORS},  ({allAuthors}) => {
+          return {
+            allAuthors: allAuthors.filter(a => a.name === name ? res.data.editAuthor : a)
+          }
+        })
+      }
+    })
+    // ! cache dang bi. sus
+
+
     
     if(result.loading){
         return <div>... loading</div>
@@ -24,8 +31,7 @@ const Authors = (props) => {
       console.log('try update')
       const newBorn = Number(born)
       console.log(newBorn, typeof(newBorn))
-
-      editNumber({variables: {name: name, setToBorn: newBorn}})
+      editNumber({variables: {name: name, setBornTo: newBorn}})
       setBorn('')
       setName('')
     }
@@ -50,6 +56,7 @@ const Authors = (props) => {
         </table>
 
         <h2>Set birth year</h2>
+
         <form onSubmit={updateBirth}>
           <div>
             name: 
