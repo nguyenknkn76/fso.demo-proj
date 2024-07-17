@@ -32,7 +32,7 @@ export const ADD_BOOK = gql`
 `
 
 export const EDIT_NUMBER = gql`
-    mutation Mutation($name: String!, $setToBorn: Int!) {
+    mutation Mutation($name: String!, $setTo: Int!) {
         editAuthor(name: $name, setBornTo: $setToBorn) {
             name
             born
