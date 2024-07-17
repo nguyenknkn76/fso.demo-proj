@@ -190,7 +190,10 @@ const resolvers = {
         }
     },
     Mutation: {
-        addBook: async (root, args) => {
+        addBook: async (root, args, context) => {
+            if (!context.currentUser){
+                throw new GraphQLError('have to login before')
+            }
             try{
                 let author = await Author.findOne({ name: args.author });
                 if (!author) {
@@ -205,7 +208,10 @@ const resolvers = {
             }
             
         },
-        editAuthor: async (root, args) => {
+        editAuthor: async (root, args, context) => {
+            if (!context.currentUser){
+                throw new GraphQLError('have to login before')
+            }
             try{
                 const author = await Author.findOneAndUpdate(
                     { name: args.name },
