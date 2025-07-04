@@ -1,6 +1,6 @@
 export const calBMI = (w: number, h: number) : number => {
   return w / (h*h);
-}
+};
 
 try {
   const weight : number = Number(process.argv[2]);

@@ -7,8 +7,8 @@ interface Result {
   rating: 1 | 2 | 3;
   ratingDescription: string;
 }
-const hello = "hello world";
-const calExercise = (exerciseTimes : Array<number>, t : number) : Result => {
+// const hello = "hello world";
+export const calExercise = (exerciseTimes : Array<number>, t : number) : Result => {
   if (!Array.isArray(exerciseTimes) || exerciseTimes.length === 0) {
     throw new Error('Invalid input: exerciseTimes must be a non-empty array');
   }
@@ -32,8 +32,8 @@ const calExercise = (exerciseTimes : Array<number>, t : number) : Result => {
     success,
     rating,
     ratingDescription
-  }
-}
+  };
+};
 
 try {
   let exerciseTimes : number[] = [];
