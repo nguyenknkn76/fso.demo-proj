@@ -1,0 +1,24 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "content": "Học React vào tối thứ 5"
+    },
+    {
+      "id": "2",
+      "content": "Xem lại bài json-server và mock API"
+    },
+    {
+      "id": "3",
+      "content": "Nghe nhạc YOASOBI khi code"
+    },
+    {
+      "id": "993c",
+      "content": "Học DSA và \"chết não\""
+    },
+    {
+      "id": "faad",
+      "content": "Học CICD (Docker, Github Action)"
+    }
+  ]
+}
