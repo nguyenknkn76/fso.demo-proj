@@ -1,25 +1,25 @@
 export type Operation = 'multiply'| 'divide' | 'add' | 'substract';
 type Result = number | string;
 
-const multiplicator = (a: number, b: number, printText: string) => {
-  console.log(printText,  a * b);
-};
+// const multiplicator = (a: number, b: number, printText: string) => {
+//   console.log(printText,  a * b);
+// };
 
 // const calculator = (a: number, b: number, op: Operation) : Result => {
-const calculator = (a: number, b: number, op: Operation) : number | string => {
-  if (op === 'multiply') {
-    return a * b;
-  } else if (op === 'divide') {
-    if (b == 0) return 'this cannot be done';
-    return a / b;
-  } else if (op === 'add') {
-    return a + b;
-  } else if (op === 'substract') {
-    return a - b;
-  } else {
-    throw new Error('Unknown operation');
-  }
-};
+// const calculator = (a: number, b: number, op: Operation) : number | string => {
+//   if (op === 'multiply') {
+//     return a * b;
+//   } else if (op === 'divide') {
+//     if (b == 0) return 'this cannot be done';
+//     return a / b;
+//   } else if (op === 'add') {
+//     return a + b;
+//   } else if (op === 'substract') {
+//     return a - b;
+//   } else {
+//     throw new Error('Unknown operation');
+//   }
+// };
 
 export const calculator2 = (a: number, b: number, op: Operation) : Result => {
   switch (op) {
