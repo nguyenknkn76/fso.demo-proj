@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.collections-container {
+  @apply grid grid-cols-4 gap-4;
+}
+
+.collection-card {
+  @apply max-w-sm rounded overflow-hidden shadow-lg;
+}
+
+.collection-image {
+  @apply w-full;
+}
+
+.collection-name {
+  @apply px-6 py-4 font-bold text-xl mb-2;
+}
+
+h1 {
+    @apply text-4xl font-bold my-8;
+  }

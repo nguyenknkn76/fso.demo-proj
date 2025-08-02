@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.header-container {
+  @apply flex flex-col items-center p-4 bg-cover bg-center;
+  background-image: url('https://img.freepik.com/free-vector/restaurant-mural-wallpaper_23-2148703851.jpg');
+}
+
+.header-top {
+  @apply flex items-center justify-between w-full mb-4;
+}
+
+.page-logo {
+  @apply text-white text-3xl font-bold;
+}
+
+.search-bar {
+  @apply flex items-center bg-white rounded-full shadow-md w-1/2 mx-4;
+}
+
+.search-input {
+  @apply flex-grow p-2 rounded-l-full outline-none;
+}
+
+.search-button {
+  @apply p-2 bg-blue-500 text-white rounded-r-full;
+}
+
+.login-register {
+  @apply text-white text-lg;
+}
+
+.choose-order-address {
+  @apply w-full mt-4;
+}

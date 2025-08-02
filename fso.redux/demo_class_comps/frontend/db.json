@@ -1,0 +1,23 @@
+{
+    "anecdotes": [
+      {
+        "id": 1,
+        "content": "Programming is like writing a book... except if you miss out a single comma on page 126, the whole thing makes no sense.",
+        "author": "Anonymous",
+        "votes": 5
+      },
+      {
+        "id": 2,
+        "content": "Debugging is like being the detective in a crime movie where you are also the murderer.",
+        "author": "Filipe Fortes",
+        "votes": 7
+      },
+      {
+        "id": 3,
+        "content": "There are only two kinds of languages: the ones people complain about and the ones nobody uses.",
+        "author": "Bjarne Stroustrup",
+        "votes": 3
+      }
+    ]
+  }
+  

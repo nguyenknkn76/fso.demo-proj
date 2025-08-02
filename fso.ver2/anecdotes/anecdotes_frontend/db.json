@@ -1,0 +1,53 @@
+{
+    "dishes": [
+      {
+        "id": 1,
+        "restaurant_id": 1,
+        "category_id": 1,
+        "name": "Chicken Parmesan",
+        "description": "Delicious chicken parmesan with marinara sauce",
+        "price": "12.99",
+        "image_url": "http://example.com/image.jpg",
+        "status": 1,
+        "created_at": "2024-07-30T06:48:16.000000Z",
+        "updated_at": "2024-07-30T07:03:13.000000Z"
+      },
+      {
+        "id": 2,
+        "restaurant_id": 3,
+        "category_id": 2,
+        "name": "Sushi",
+        "description": "Delicious chicken parmesan with marinara sauce",
+        "price": "12.99",
+        "image_url": "http://example.com/image.jpg",
+        "status": 1,
+        "created_at": "2024-08-01T17:23:10.000000Z",
+        "updated_at": "2024-08-01T17:23:10.000000Z"
+      },
+      {
+        "id": 3,
+        "restaurant_id": 3,
+        "category_id": 2,
+        "name": "Sashimi",
+        "description": "Delicious chicken parmesan with marinara sauce",
+        "price": "12.99",
+        "image_url": "http://example.com/image.jpg",
+        "status": 1,
+        "created_at": "2024-08-01T17:23:19.000000Z",
+        "updated_at": "2024-08-01T17:23:19.000000Z"
+      },
+      {
+        "id": 4,
+        "restaurant_id": 3,
+        "category_id": 2,
+        "name": "Tempura",
+        "description": "Battered and deep-fried seafood or vegetables",
+        "price": "12.99",
+        "image_url": "http://example.com/image.jpg",
+        "status": 1,
+        "created_at": "2024-08-01T17:23:58.000000Z",
+        "updated_at": "2024-08-01T17:23:58.000000Z"
+      }
+    ]
+  }
+  

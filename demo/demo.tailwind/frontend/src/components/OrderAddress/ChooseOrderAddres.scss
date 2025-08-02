@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.choose-order-address-container {
+  @apply flex flex-col items-center justify-center h-screen bg-gray-100;
+}
+
+.choose-order-address-title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.choose-order-address-dropdown {
+  @apply w-1/2 bg-white border border-gray-300 rounded-lg shadow-md p-4;
+}
+
+.choose-order-address-option {
+  @apply p-2 hover:bg-gray-200 cursor-pointer;
+}

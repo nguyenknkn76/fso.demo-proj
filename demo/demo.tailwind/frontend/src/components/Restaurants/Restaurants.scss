@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.restaurants-container {
+  @apply grid grid-cols-4 gap-4;
+}
+
+.restaurant-card {
+  @apply max-w-sm rounded overflow-hidden shadow-lg;
+}
+
+.restaurant-image {
+  @apply w-full;
+}
+
+.restaurant-details {
+  @apply px-6 py-4;
+}
+
+.restaurant-name {
+  @apply font-bold text-xl mb-2;
+}
+
+.restaurant-info {
+  @apply text-gray-700 text-base;
+}

@@ -1,0 +1,44 @@
+npm init
+npm install express
+npm install nodemon
+npm install cors
+npm install mongoose
+npm install mongodb
+npm install dotenv
+
+npm install express-async-errors
+npm install bcrypt
+npm install jsonwebtoken
+
+
+{
+  "scripts": {
+    "dev": "nodemon index.js",
+  }
+}
+
+// for social service
+npm install social-post-api
+
+// frontend 
+npm create vite@latest snv2_frontend -- --template react
+npm install 
+npm run dev
+
+npm install axios
+npm install react-router-dom
+npm install react-bootstrap bootstrap
+
+npm install redux
+npm install react-redux
+npm install @reduxjs/toolkit
+
+//json server
+npm install json-server --save-dev
+
+"scripts": 
+  {
+    "server": "json-server -p3001 --watch db.json"
+  }
+
+npm run server

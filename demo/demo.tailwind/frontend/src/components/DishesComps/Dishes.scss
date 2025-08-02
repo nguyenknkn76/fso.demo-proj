@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.dishes-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.dish-card {
+  @apply bg-white p-4 rounded-lg shadow-md;
+}
+
+.dish-image {
+  @apply w-full h-48 object-cover rounded-t-lg;
+}
+
+.dish-name {
+  @apply text-xl font-bold mt-2;
+}
+
+.dish-description {
+  @apply text-gray-600 mt-1;
+}
+
+.dish-price {
+  @apply text-green-500 mt-2;
+}

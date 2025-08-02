@@ -1,0 +1,68 @@
+{
+  "notes": [
+    {
+      "content": "the app state is in redux store",
+      "important": true,
+      "id": "1"
+    },
+    {
+      "content": "state changes are made with actions",
+      "important": true,
+      "id": "2"
+    },
+    {
+      "content": "use axios and json server",
+      "important": true,
+      "id": "3"
+    },
+    {
+      "id": "2eae",
+      "content": "alo",
+      "important": false
+    },
+    {
+      "id": "4e3d",
+      "content": "hiimgosu",
+      "important": false
+    },
+    {
+      "id": "8a57",
+      "content": "test append note",
+      "important": true
+    },
+    {
+      "id": "9c50",
+      "content": "nguyen",
+      "important": false
+    },
+    {
+      "id": "1a06",
+      "content": "alo",
+      "important": true
+    },
+    {
+      "id": "4de0",
+      "important": true
+    },
+    {
+      "id": "f4b6",
+      "content": "hello",
+      "important": true
+    },
+    {
+      "id": "4036",
+      "content": "hello",
+      "important": false
+    },
+    {
+      "id": "aec9",
+      "content": "alo",
+      "important": false
+    },
+    {
+      "id": "9cd2",
+      "content": "ok",
+      "important": true
+    }
+  ]
+}
