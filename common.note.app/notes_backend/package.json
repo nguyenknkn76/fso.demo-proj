@@ -1,0 +1,44 @@
+{
+  "name": "notes_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test node --test",
+    "build:ui": "cd ../notes_frontend && npm run build && cp -r dist ../notes_backend",
+    "build:ui2": "rm -rf dist && cd ../notes_frontend && npm run build && cp -r dist ../notes_backend",
+    "deploy:full": "npm run build:ui && cd .. && git add . && git commit -m uibuild && git push origin part51",
+    "lint": "eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "4.0",
+    "mongoose": "^8.3.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "render": "^0.1.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.1.1",
+    "@stylistic/eslint-plugin-js": "^1.7.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.0.0",
+    "shx": "^0.3.4",
+    "supertest": "^7.0.0"
+  }
+}
